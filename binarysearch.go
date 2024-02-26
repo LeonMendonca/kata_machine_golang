@@ -6,7 +6,7 @@ func binarySearch(arr []int, el int) bool {
     var low, mid, high int
     low = 0 //first index
     high = len(arr)-1 //last index
-    for true {
+    for {
         //mid = (low+high) / 2
         mid = low + (high - low) / 2
         if( arr[mid] == el) {
@@ -25,7 +25,7 @@ func binarySearch(arr []int, el int) bool {
 }
 
 func main() {
-    arr := []int{1,4,6,9,15}
-    result := binarySearch(arr,8)
+    arr := []int{1,4,6,9,15,17,20,22,27,32,35,37,38,49,52,105,107,171,200,201,202,301,444,555}
+    result := binarySearch(arr,36)
     fmt.Println(result)
 }

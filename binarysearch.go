@@ -9,6 +9,7 @@ func binarySearch(arr []int, el int) bool {
     for {
         //mid = (low+high) / 2
         mid = low + (high - low) / 2
+        fmt.Println("low:",low,"mid:",mid,arr[mid],"high",high)
         if( arr[mid] == el) {
             println("found element",el)
             return true
@@ -19,13 +20,14 @@ func binarySearch(arr []int, el int) bool {
         }    
 
         //it may cross or have equal index
-        if(low >= high) { break }
+        if(low > high) { break }
     }
     return false
 }
 
 func main() {
     arr := []int{1,4,6,9,15,17,20,22,27,32,35,37,38,49,52,105,107,171,200,201,202,301,444,555}
-    result := binarySearch(arr,36)
+    result := binarySearch(arr,35)
+    fmt.Println(len(arr))
     fmt.Println(result)
 }

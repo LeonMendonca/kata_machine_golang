@@ -8,14 +8,17 @@ type ringBuffer struct {
 }
 
 /*
-NOTE : You can use len(aray) instead of rb.bufferSize, but since we already 
+NOTE : You can use len(array) instead of rb.bufferSize, but since we already 
 assign the size to the array in the constructor its better to use that
 */
 
-//Since, the head is always 0, because it indicates dead end for the insertion performed through tail
+//Since, the head is always has 0 value, because it indicates dead end for the insertion performed through tail
 //we print the ringBuffer from head+1
 func (rb ringBuffer) printRingBuffer () {
-    //the if statement avoids unnecessary iteration
+    /*
+    if ringBuffer is empty and this function is called
+    avoid printing series of 0
+    */
     if(rb.head == rb.tail) {
         return
     }
@@ -27,7 +30,7 @@ func (rb ringBuffer) printRingBuffer () {
             break
         }
         i = (i+1)%rb.bufferSize 
-   }
+    }
     println()
 }
 

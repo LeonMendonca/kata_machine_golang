@@ -19,7 +19,7 @@ func binarySearch(arr []int, el int) bool {
             high = mid-1
         }    
 
-        //it may cross or have equal index
+        //if they both cross
         if(low > high) { break }
     }
     return false

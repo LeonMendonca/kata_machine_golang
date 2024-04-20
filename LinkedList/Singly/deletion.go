@@ -1,4 +1,4 @@
-package list
+package singlylist
 
 func (list *linkedlist) Pop() int {
   //no node
@@ -9,7 +9,7 @@ func (list *linkedlist) Pop() int {
 
   //single node
   if(list.head.next == nil && list.tail.next == nil) {
-    var popNode = list.head
+    var popNode = list.tail
     list.head = nil
     list.tail = nil
     list.Length--
@@ -66,29 +66,28 @@ func (list *linkedlist) RemoveAt(position int) int {
     return popNode.value
   }
 
+  //validate the position
+  if(position > list.Length || position < 1) {
+    println("wrong position")
+    return -1
+  }
+
   //more than one node
   if(position == 1) {
-    var popNode = list.head
-    list.head = list.head.next
-    list.Length--
+    return list.Deque()
+  } else if (position == list.Length) {
+    return list.Pop() 
+  } 
 
-    popNode.next = nil //free
-    return popNode.value
-  }
-  
+  list.Length--
   current := list.head
-  for i:=1 ; i<position-1 && current != nil ; i++ {
+  for i:=1 ; i<position-1 ; i++ {
     current = current.next
-  }
-
-  if(current.next == nil || position < 1) {
-    println("wrong position")
-    return 0
   }
 
   var popNode = current.next
   current.next = current.next.next
-  list.Length--
 
   return popNode.value
+
 }

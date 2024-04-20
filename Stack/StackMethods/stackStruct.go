@@ -1,9 +1,5 @@
 package stack
 
-import (
-  "fmt"
-)
-
 type Node struct {
     value int
     prev *Node
@@ -21,10 +17,4 @@ func Stack() *stack {
     } 
 }
 
-func (s *stack) Printstack() {
-    curr := s.head
-    for curr != nil {
-        fmt.Println("|_",curr.value,"_|")
-        curr = curr.prev
-    }
-}
+

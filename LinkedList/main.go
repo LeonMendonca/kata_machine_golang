@@ -3,34 +3,49 @@ package main
 import (
   "fmt"
   "linkedlist/Singly"
+  "linkedlist/Doubly"
 )
 
 func main() {
   fmt.Print("linked list\n\n")
-  Linkedlist := list.LinkedList()
+
+  //SINGLY
+
+  //constructor call
+  SinglyLinkedlist := singlylist.SinglyLinkedList()
 
 /*
-  Linkedlist.Prepend(34)
-  Linkedlist.Prepend(45)
-  Linkedlist.Prepend(56)
+  SinglyLinkedlist.Append(56)
+  SinglyLinkedlist.Prepend(34)
+  SinglyLinkedlist.InsertAt(99,5)
 */
 /*
-  Linkedlist.InsertAt(99,5)
-  Linkedlist.InsertAt(100,2)
-*/
-/*
-  Linkedlist.Append(56)
+  fmt.Println("Popped Node:",SinglyLinkedlist.Pop())
+  fmt.Println("Popped Node:",SinglyLinkedlist.Deque())
+  fmt.Println("Popped Node:",SinglyLinkedlist.RemoveAt(3))
 */
 
-  Linkedlist.Prepend(34)
-  Linkedlist.Prepend(45)
-  Linkedlist.Prepend(56)
+  SinglyLinkedlist.PrintList()
+  fmt.Println("length of SinglyLinkedlist",SinglyLinkedlist.Length)
+
+  
+  //DOUBLY
+  
+  //constructor call
+  DoublyLinkedlist := doublylist.DoublyLinkedList()
 /*
-  fmt.Println("Popped Node:",Linkedlist.Pop())
-  fmt.Println("Popped Node:",Linkedlist.Deque())
-  fmt.Println("Popped Node:",Linkedlist.RemoveAt(3))
+  DoublyLinkedlist.Append(1)
+  DoublyLinkedlist.Prepend(11)
+  DoublyLinkedlist.InsertAt(44,4) 
+*/
+/*
+  fmt.Println(DoublyLinkedlist.Pop())
+  fmt.Println(DoublyLinkedlist.Deque())
+  fmt.Println(DoublyLinkedlist.RemoveAt(2))
 */
 
-  Linkedlist.PrintList()
-  fmt.Println("length is",Linkedlist.Length)
+  DoublyLinkedlist.PrintDoublyLinkedListNext()
+  DoublyLinkedlist.PrintDoublyLinkedListPrev()
+  fmt.Println("Length of DoublyLinkedlist",DoublyLinkedlist.Length)
+
 }

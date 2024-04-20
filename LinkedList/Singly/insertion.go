@@ -1,4 +1,4 @@
-package list
+package singlylist
 
 func (list *linkedlist) Append(item int) {
   NewNode := &Node{value:item,next:nil} 
@@ -33,6 +33,7 @@ func (list *linkedlist) Prepend(item int) {
 }
 
 func (list *linkedlist) InsertAt(item, position int) {
+
   NewNode := &Node{value:item,next:nil} 
 
   if(list.head == nil && list.tail == nil) {
@@ -42,31 +43,24 @@ func (list *linkedlist) InsertAt(item, position int) {
     return
   }
 
-  //update the head
-  if(position == 1) {
-    NewNode.next = list.head 
-    list.head = NewNode
-    list.Length++
-    return
-  }
- 
-  //iterate from head Node to the Position specified -1
-  current := list.head
-  for i:=1 ; i < position-1 && current != nil ; i++ {
-    current = current.next
-  }
-  //fmt.Println(current) //debugging print
-  if(current == nil || position < 1) {
+  if(position > list.Length+1 || position < 1) {
     println("wrong position")
     return
   }
- 
-  //if last Node, then update the tail
-  if(current.next == nil) {
-    list.tail = NewNode
+
+  if(position == 1) {
+    list.Prepend(item)
+  } else if (position == list.Length+1) {
+    list.Append(item)
+  } else {
+    //iterate from head Node to the Position specified -1
+    current := list.head
+    for i:=1 ; i < position-1 ; i++ {
+      current = current.next
+    }
+    NewNode.next = current.next
+    current.next = NewNode
+    list.Length++
   }
 
-  NewNode.next = current.next
-  current.next = NewNode
-  list.Length++
 }

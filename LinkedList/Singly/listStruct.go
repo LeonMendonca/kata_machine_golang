@@ -1,7 +1,6 @@
 //insertion and deletion are in 2 different files, these are required by both files
-package list
+package singlylist
 
-import ("fmt")
 
 type Node struct {
   value int
@@ -13,7 +12,8 @@ type linkedlist struct {
   Length int
 }
 
-func LinkedList() *linkedlist {
+//constructor
+func SinglyLinkedList() *linkedlist {
   return &linkedlist{
     head:nil,
     tail:nil,
@@ -21,11 +21,4 @@ func LinkedList() *linkedlist {
   }
 }
 
-func (list *linkedlist) PrintList() {
-  current := list.head
-  for current != nil {
-    fmt.Print(current.value,"->")
-    current = current.next
-  }
-  println("nil")
-}
+

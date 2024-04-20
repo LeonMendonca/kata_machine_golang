@@ -1,11 +1,21 @@
-package list
+package doublylist
+
 
 type Node struct {
-  value int
-  next, prev *Node
+  Value int
+  Next, Prev *Node
 }
 
 type LinkedList struct {
-  head, tail *Node
-  length int
+  Head, Tail *Node
+  Length int
+}
+
+//constructor
+func DoublyLinkedList() *LinkedList {
+  return &LinkedList {
+    Head:nil,
+    Tail:nil,
+    Length:0,
+  }
 }

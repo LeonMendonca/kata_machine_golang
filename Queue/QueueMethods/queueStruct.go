@@ -1,6 +1,5 @@
 package queue
 
-import ("fmt")
 
 type Node struct {
     value int
@@ -19,13 +18,4 @@ func Queue() (*queue) {
       tail:nil, 
       Length:0,
     }
-}
-
-func (q *queue) PrintQueue() {
-    curr := q.head
-    for curr != nil {
-        fmt.Print(curr.value,"->")
-        curr = curr.next
-    }
-    println("nil")
 }

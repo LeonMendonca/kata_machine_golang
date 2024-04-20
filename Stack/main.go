@@ -6,12 +6,13 @@ import (
 )
 
 func main() {
+    fmt.Print("Stack\n\n")
     Stack := stack.Stack();
-    for i:=1 ; i<=3 ; i++ {
-        Stack.Push(i)
-    }
+    /*
+    Stack.Push(3)
     fmt.Println("popped element:",Stack.Pop())
     fmt.Println("top of Stack:",Stack.Peek())
-    fmt.Println("len:",Stack.Length)
+    fmt.Println("length:",Stack.Length)
+    */
     Stack.Printstack()
 }

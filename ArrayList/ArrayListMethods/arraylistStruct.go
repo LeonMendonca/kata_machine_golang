@@ -1,9 +1,5 @@
 package arraylist
 
-import (
-  "fmt"
-)
-
 type arrayList struct {
     array []int
     Length, Capacity int
@@ -22,13 +18,6 @@ func ArrayList() *arrayList {
       Length:0, 
       Capacity:5,
     }
-}
-
-func (arrlt *arrayList) PrintArray() {
-    for i:=0 ; i<arrlt.Length ; i++ {
-        fmt.Print(arrlt.array[i]," ")
-    }
-    println()
 }
 
 

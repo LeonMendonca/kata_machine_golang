@@ -2,7 +2,7 @@ package main
 
 import (
   "fmt"
-  "queue/QueueMethods"
+  queue "queue/queuemethods"
 )
 
 func main() {

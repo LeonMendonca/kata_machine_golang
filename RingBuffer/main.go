@@ -2,7 +2,7 @@ package main
 
 import (
   "fmt"
-  "ringbuffer/RingBufferMethods"
+  ringbuffer "ringbuffer/ringbuffermethods"
 )
 
 func main() {

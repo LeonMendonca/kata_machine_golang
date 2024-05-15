@@ -1,4 +1,4 @@
-package stack
+package stackmethods
 
 func (s *stack) Peek() int {
     if(s.head != nil) {

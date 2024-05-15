@@ -1,4 +1,4 @@
-package queue
+package queuemethods
 
 func (q *queue) Enqueue(item int) {
     newNode := &Node{value:item, next:nil}

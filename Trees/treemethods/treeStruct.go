@@ -1,4 +1,4 @@
-package btree
+package treemethods
 
 type Treenode struct {
   Data int

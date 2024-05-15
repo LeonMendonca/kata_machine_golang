@@ -1,4 +1,4 @@
-package stack
+package stackmethods
 
 func (s *stack) Push(item int) {
     newNode := &Node{value:item, prev:nil}

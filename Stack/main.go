@@ -2,7 +2,7 @@ package main
 
 import (
   "fmt"
-  "stack/StackMethods"
+  stack "stack/stackmethods"
 )
 
 func main() {

@@ -3,7 +3,7 @@ package main
 
 import (
   "fmt"
-  "arrays/ArrayMethods"
+  array "arrays/arraymethods"
 )
 
 func main() {

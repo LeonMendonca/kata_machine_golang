@@ -1,4 +1,4 @@
-package ringbuffer
+package ringbuffermethods
 
 /*
 What if you increment the tail instead of check?

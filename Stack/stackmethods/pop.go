@@ -1,4 +1,4 @@
-package stack
+package stackmethods
 
 import (
   "math"

@@ -1,4 +1,4 @@
-package array
+package arraymethods
 
 func GetIndex(arr []int, index int) (int, bool) {
     length := len(arr)

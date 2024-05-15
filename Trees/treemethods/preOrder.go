@@ -1,4 +1,4 @@
-package btree
+package treemethods
 
 
 func (treeNode *Treenode) PreOrder(path *[]int) []int {

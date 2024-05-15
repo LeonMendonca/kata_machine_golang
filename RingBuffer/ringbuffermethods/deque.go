@@ -1,4 +1,4 @@
-package ringbuffer
+package ringbuffermethods
 
 func (rb *ringBuffer) Deque () int {
     if(rb.head == rb.tail) {

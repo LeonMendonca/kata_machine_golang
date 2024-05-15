@@ -1,4 +1,4 @@
-package ringbuffer
+package ringbuffermethods
 
 type ringBuffer struct {
     array []int

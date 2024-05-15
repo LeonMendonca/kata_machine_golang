@@ -1,4 +1,4 @@
-package array
+package arraymethods
 
 //Nothing as insertion, but update :)
 func UpdateElement(arr []int, index, newval int) (bool) {

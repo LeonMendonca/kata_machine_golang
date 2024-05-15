@@ -7,7 +7,7 @@ package main
 
 import(
   "fmt"
-  "arraylist/ArrayListMethods"
+  "arraylist/arraylistmethods"
 )
 
 

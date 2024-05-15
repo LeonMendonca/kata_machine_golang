@@ -1,4 +1,4 @@
-package queue
+package queuemethods
 
 func (q *queue) Deque() int {
     if(q.head == nil) {

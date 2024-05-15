@@ -1,4 +1,4 @@
-package stack
+package stackmethods
 
 type Node struct {
     value int

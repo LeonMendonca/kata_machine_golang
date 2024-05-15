@@ -1,4 +1,4 @@
-package ringbuffer
+package ringbuffermethods
 
 //Since, the head is always has 0 value, because it indicates dead end for the insertion performed through tail
 //we print the ringBuffer from head+1

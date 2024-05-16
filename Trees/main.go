@@ -37,5 +37,17 @@ func main() {
   //root2 := treemethods.BinaryTree(tree, 0, 7) //array, start idx, length
   //root2.InOrder(&path)
   //fmt.Println(path)
-  root.Bfs(2) 
+
+  //root.Bfs(2) 
+
+  arr1 := []int{1,2,3}
+  arr2 := []int{1,2,34}
+
+  treeA := treemethods.BinaryTree(arr1,0,3)
+  treeB := treemethods.BinaryTree(arr2,0,3)
+
+
+  var result = treemethods.Btcomp(treeA,treeB)
+  println(result)
+
 }

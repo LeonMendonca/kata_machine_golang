@@ -23,10 +23,9 @@ func main() {
   rchild.TLeft = nil
   rchild.TRight = nil
 
-  //var path []int
+  var path []int
   
   //run these function below one at a time, since ive used pointers to the path array!
-
   //root.PreOrder(&path)
   //root.PostOrder(&path)
   //root.InOrder(&path)
@@ -38,16 +37,26 @@ func main() {
   //root2.InOrder(&path)
   //fmt.Println(path)
 
+  //Breadth first search
   //root.Bfs(2) 
 
+  //Binary tree comparison
+  /*
   arr1 := []int{1,2,3}
   arr2 := []int{1,2,34}
+  */
+  //treeA := treemethods.BinaryTree(arr1,0,3)
+  //treeB := treemethods.BinaryTree(arr2,0,3)
+  //var result = treemethods.Btcomp(treeA,treeB)
 
-  treeA := treemethods.BinaryTree(arr1,0,3)
-  treeB := treemethods.BinaryTree(arr2,0,3)
+  //Bt insert and delete
+  bst := &treemethods.Treenode{} //decalred and allocated memory
+  bst.BtreeInsert(2)
+  bst.BtreeInsert(4)
+  bst.BtreeInsert(11)
 
+  fmt.Println("deleted:",bst.BstDelete(4))
+  fmt.Println(bst.PreOrder(&path))
 
-  var result = treemethods.Btcomp(treeA,treeB)
-  println(result)
 
 }

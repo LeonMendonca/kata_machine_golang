@@ -11,6 +11,7 @@ func main() {
   lchild := &treemethods.Treenode{}
   rchild := &treemethods.Treenode{}
 
+
   root.Data = 31
   root.TLeft = lchild
   root.TRight = rchild
@@ -54,8 +55,10 @@ func main() {
   bst.BtreeInsert(2)
   bst.BtreeInsert(4)
   bst.BtreeInsert(11)
+  var left, right int
+  fmt.Println("h",bst.Height(left,right))
 
-  fmt.Println("deleted:",bst.BstDelete(4))
+  bst.BstDelete(11)
   fmt.Println(bst.PreOrder(&path))
 
 

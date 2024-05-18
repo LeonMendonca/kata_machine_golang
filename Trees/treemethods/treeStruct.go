@@ -5,7 +5,7 @@ type Treenode struct {
   TLeft, TRight *Treenode
 }
 
-//constructor - it builds a tree
+//constructor - it builds a tree in DFS approach
 func BinaryTree(nodes []int, idx, length int) *Treenode {
   if idx >= length {
     return nil

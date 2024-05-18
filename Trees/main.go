@@ -41,6 +41,9 @@ func main() {
   //Breadth first search
   //root.Bfs(2) 
 
+  //Depth first search
+  fmt.Println("node found",root.Dfs(341))
+
   //Binary tree comparison
   /*
   arr1 := []int{1,2,3}

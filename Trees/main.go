@@ -39,10 +39,10 @@ func main() {
   //fmt.Println(path)
 
   //Breadth first search
-  //root.Bfs(2) 
+  //fmt.Println("node found",root.Bfs(341))
 
   //Depth first search
-  fmt.Println("node found",root.Dfs(341))
+  //fmt.Println("node found",root.Dfs(341))
 
   //Binary tree comparison
   /*

@@ -1,15 +1,16 @@
 package treemethods
 
-func (treeNode *Treenode) Dfs(value int) *Treenode {
-  var foundNode *Treenode
+func (treeNode *Treenode) Dfs(value int) bool {
   if(treeNode == nil) {
-    return treeNode
+    return false
   }
   if(treeNode.Data == value) {
-    return treeNode
+    return true
   }
-  foundNode = treeNode.TLeft.Dfs(value)
-  foundNode = treeNode.TRight.Dfs(value)
-
-  return foundNode
+  if(treeNode.TLeft.Dfs(value)) {
+    return true
+  } else if(treeNode.TRight.Dfs(value)) {
+    return true
+  }
+  return false
 }

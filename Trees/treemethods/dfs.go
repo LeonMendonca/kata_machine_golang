@@ -1,3 +1,4 @@
+//This is a normal DFS, refer to dfsBt
 package treemethods
 
 func (treeNode *Treenode) Dfs(value int) bool {

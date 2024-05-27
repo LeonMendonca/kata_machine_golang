@@ -6,5 +6,5 @@ type heap struct {
 }
 
 func Heap() *heap {
-  return &heap{heapArray:[]int{50,100,200,101,103,202,204}, Length:7}
+  return &heap{heapArray:[]int{}, Length:0}
 }

@@ -6,7 +6,7 @@ func (heap *heap) Delete() int {
   }
   //save the minheap
   minHeap := heap.heapArray[0]
-  lastIdxEl := heap.heapArray[heap.Length-1]
+  lastIdxEl := heap.heapArray[heap.Length-1] //using slices to pop the first node
   heap.heapArray[0] = lastIdxEl
   heap.Length--
   heap.heapArray = heap.heapArray[:heap.Length]
